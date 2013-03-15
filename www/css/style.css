@@ -49,7 +49,7 @@ h4 {
   display: block;
 }
 p {
-  font-size: 13px;
+  font-size: 17px;
   margin: 10px 0;
 }
 time {
@@ -81,7 +81,7 @@ ol li {
   list-style-image: url('../img/li1.png');
   margin-left: 15px;
   margin-bottom: 10px;
-  font-size: 13px;
+  font-size: 17px;
 }
 .chapters {
   list-style-image: url('../img/li2.png');

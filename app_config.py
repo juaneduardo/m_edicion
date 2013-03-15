@@ -27,6 +27,7 @@ DEBUG = True
 PROJECT_DESCRIPTION = 'Manual de Periodismo de Datos Iberoamericano.'
 SHARE_URL = 'http://%s/%s/' % (PRODUCTION_S3_BUCKETS[0], DEPLOYED_NAME)
 
+
 TWITTER = {
     'TEXT': PROJECT_NAME,
     'URL': SHARE_URL

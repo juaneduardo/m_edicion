@@ -21,8 +21,33 @@ def index():
     return render_template('index.html', **make_context())
 
 
+@app.route('/manual.html')
+def manual():
+    """
+    Example view demonstrating rendering a simple HTML page.
+    """
+    return render_template('manual.html', **make_context())
 
+@app.route('/colaborar.html')
+def colaborar():
+    """
+    Example view demonstrating rendering a simple HTML page.
+    """
+    return render_template('colaborar.html', **make_context())
 
+@app.route('/indice.html')
+def indice():
+    """
+    Example view demonstrating rendering a simple HTML page.
+    """
+    return render_template('indice.html', **make_context())
+
+@app.route('/participantes.html')
+def participantes():
+    """
+    Example view demonstrating rendering a simple HTML page.
+    """
+    return render_template('participantes.html', **make_context())
 
 # Render LESS files on-demand
 @app.route('/less/<string:filename>')
