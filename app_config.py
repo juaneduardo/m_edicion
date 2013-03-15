@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 """
 Project-wide application configuration.
@@ -9,9 +10,9 @@ They will be exposed to users. Use environment variables instead.
 
 import os
 
-PROJECT_NAME = 'App Template'
-DEPLOYED_NAME = 'app-template' 
-REPOSITORY_NAME = 'app-template'
+PROJECT_NAME = 'Manual de Periodismo de Datos Iberoamericano'
+DEPLOYED_NAME = 'Manual de Periodismo de Datos Iberoamericano' 
+REPOSITORY_NAME = 'm_edicion'
 
 PRODUCTION_S3_BUCKETS = ['apps.npr.org', 'apps2.npr.org']
 PRODUCTION_SERVERS = ['cron.nprapps.org']
@@ -23,7 +24,7 @@ S3_BUCKETS = []
 SERVERS = []
 DEBUG = True
 
-PROJECT_DESCRIPTION = 'An opinionated project template for client-side apps.'
+PROJECT_DESCRIPTION = 'Manual de Periodismo de Datos Iberoamericano.'
 SHARE_URL = 'http://%s/%s/' % (PRODUCTION_S3_BUCKETS[0], DEPLOYED_NAME)
 
 TWITTER = {

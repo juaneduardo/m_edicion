@@ -1,30 +1,120 @@
 {% extends '_base.html' %}
 
 {% block header_content %}
-<header>
-	<div class="container">
-		<div class="row">
-			<div class="span12">
-				<h1>Across-The-Top Header</h1>
-				<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
-			</div>
-		</div>
-	</div>
-</header>
+<div class="top">
+            <div class="container">
+                <div class="row">
+                    <div class="manual span4">
+                        <h1>Manual de Periodismo de Datos Iberoamericano</h1>
+
+                        <a class="big-button" href="#">Colaborar Ahora</a>
+
+                        <a class="display-block" href="#">Notificarme cuando sea publicado ›</a>
+                    </div>
+
+                    <div class="span8 clearfix">
+                        <div class="text pull-left">
+                            <p>El Manual de Periodismo de Datos es un proyecto gratuito y abierto, escrito de forma colaborativa y voluntaria por periodistas, desarrolladores y diseñadores. Su objetivo es dar cuenta del estado del Periodismo de Datos en Iberoamérica y cómo desarrollar Periodismo de Datos en nuestros países.</p>
+
+                            <span>Incluye temas como:</span>
+                            <ul class="list">
+                                <li>Casos Destacados</li>
+                                <li>Herramientas y código</li>
+                                <li>Ciberseguridad</li>
+                                <li>FOIA y Datos Abiertos</li>
+                            </ul>
+
+                            <a href="#">ver más ›</a>
+                        </div>
+
+                        <img class="pull-right" src="tmp/manual.png"/>
+                    </div>
+                </div>
+                <!-- END row -->
+            </div>
+        </div>
+        <!-- END top -->
 {% endblock %}
 
 
 {% block content %}
-<h1>{{ PROJECT_NAME }}</h1>
-<div id="story-meta">
-	<p class="byline">by <span>Name Here</span></p>
-	<p class="dateblock">
-		<span class="date">January 22, 2013</span>
-		<span class="time"> 3:37 AM</span>
-	</p>
-</div>
+				<section class="span4">
+                        <div class="box-heading">
+                            <h2>Indice</h2>
+                        </div>
 
-<p id="template-example"></p>
+                        <ul class="chapters">
+                            <li>
+                                <strong>Capítulo 1</strong>
+                                Introducción. ¿Qué es el periodismo de datos y para qué sirve?
+                            </li>
+
+                            <li>
+                                <strong>Capítulo 2</strong>
+                                Estado de situación Latinoamérica y España
+                            </li>
+
+                            <li>
+                                <strong>Capítulo 3</strong>
+                                Obteniendo los datos
+                            </li>
+
+                            <li>
+                                <strong>Capítulo 4</strong>
+                                Extrayendo los datos
+                            </li>
+
+                            <li>
+                                <strong>Capítulo 5</strong>
+                                Entregando el análisis
+                            </li>
+
+                            <li>
+                                <strong>Capítulo 6</strong>
+                                Casos de Estudio
+                            </li>
+                        </ul>
+
+                        <a class="button" href="#">Detalle de los Capítulos</a>
+                    </section>
+
+                    <section class="span4">
+                        <div class="box-heading">
+                            <h2>Participantes</h2>
+                        </div>
+
+                        <strong>Algunas de las personas y organizaciones que están participando en la elaboración del Manual:</strong>
+
+                        <ul>
+                            <li>Sandra Crucianelli (Argentina)</li>
+                            <li><a href="#">Mariano Blejman</a> (Argentina)</li>
+                            <li>Hacks/Hackers Buenos Aires</li>
+                            <li>Gustavo Faleiros (Brasil)</li>
+                            <li>Hacks/Hackers Sao Paulo</li>
+                            <li>Hack/Hackers Santiago</li>
+                            <li><a href="#">Mariana Santos</a> (Portugal)</li>
+                            <li><a href="#">Jorge Luis Sierra</a> (México)</li>
+                            <li>Fundación Civio (España)</li>
+                        </ul>
+
+                        <a class="button" href="#">Ver Listado Completo</a>
+                    </section>
+
+
+                    <section class="last-news span4">
+                        <div class="box-heading">
+                            <h2>Últimas Noticias</h2>
+                        </div>
+
+                        <a class="title" href="#">¡Lanzamos la escritura! Pismod tincidunt ut laoreet</a>
+                        <time>05/05/2013</time>
+
+                        <img src="tmp/01.jpg" alt=""/>
+
+                        <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum cla ram, anteposuerit litt erarutt m formas humanitatis per seacula quarta decima et qmus parum cla ram, ante posueriuinta decima.dodem modo... <a href="#">más ›</a></p>
+
+                        <a class="button" href="#">Ver Más Noticias</a>
+                    </section>
 {% endblock %}
 
 

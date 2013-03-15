@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 import json
 from mimetypes import guess_type
@@ -19,19 +20,9 @@ def index():
     """
     return render_template('index.html', **make_context())
 
-@app.route('/widget.html')
-def widget():
-    """
-    Embeddable widget example page.
-    """
-    return render_template('widget.html', **make_context())
 
-@app.route('/test_widget.html')
-def test_widget():
-    """
-    Example page displaying widget at different embed sizes.
-    """
-    return render_template('test_widget.html', **make_context())
+
+
 
 # Render LESS files on-demand
 @app.route('/less/<string:filename>')
