@@ -15,10 +15,11 @@ app = Flask(app_config.PROJECT_NAME)
 # Example application views
 @app.route('/')
 def index():
-    """
-    Example view demonstrating rendering a simple HTML page.
-    """
-    return render_template('index.html', **make_context())
+    import feedparser
+    noticias_tumblr = "http://periodismodedatos.tumblr.com/rss"
+    feed = feedparser.parse( noticias_tumblr )
+
+    return render_template('index.html', feed=feed, **make_context())
 
 
 @app.route('/manual.html')

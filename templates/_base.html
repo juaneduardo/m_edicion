@@ -20,14 +20,7 @@
     {{ CSS.push('css/style.css') }}
     {{ CSS.render('css/app.min.css') }}
 
-    <!-- AD CODE -->
-    <script>
-        NPR = {};
-        NPR.PageInfo = {};
-        NPR.PageInfo.getUrlParameter = function (param) {
-            return false;
-        };
-    </script>
+   
 
     <!-- JS -->
 	{{ JS.push('js/app_config.js') }}
@@ -41,13 +34,13 @@
 	
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@nprapps">
+    <meta name="twitter:site" content="@poderomedia">
     <meta property="og:title" content="{{ FACEBOOK.TITLE }}" />
     <meta property="og:url" content="{{ FACEBOOK.URL }}" />
     <meta property="og:type" content="article" />
     <meta property="og:description" content="{{ FACEBOOK.DESCRIPTION }}" />
     <meta property="og:image" content="{{ FACEBOOK.IMAGE_URL }}" />
-    <meta property="og:site_name" content="NPR.org" />
+    <meta property="og:site_name" content="poderomedia.org" />
     <meta property="fb:app_id" content="{{ FACEBOOK.APP_ID }}" />
 
     {% block extra_head %}
@@ -74,10 +67,11 @@
 
                         <div class="span4 social pull-right">
                             <ul class="clearfix">
-                                <li>Compartir: </li>
-                                <li class="google"><a href="#"></a></li>
-                                <li class="facebook"><a href="http://www.facebook.com/poderopedia"></a></li>
-                                <li class="twitter"><a href="https://twitter.com/poderopedia"></a></li>
+                                <li>Compartir: </li> 
+                                <li class="google"><a href="https://m.google.com/app/plus/x/?v=compose&content= {{ TWITTER.TEXT|urlencode }}" onclick="window.open('https://m.google.com/app/plus/x/?v=compose&content={{ TWITTER.TEXT|urlencode }} {{ TWITTER.URL|urlencode }}','gplusshare','width=450,height=300,left='+(screen.availWidth/2-225)+',top='+(screen.availHeight/2-150)+'');return false;"></a>
+								</li>
+                                <li class="twitter"><a rel="external" href="http://twitter.com/share?text={{ TWITTER.TEXT|urlencode }} &amp;url={{ TWITTER.URL|urlencode }}" alt="Share on Twitter" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Twitter In Navbar', '{{ PROJECT_NAME }}']);"></a></li>
+								<li class="facebook"><a rel="external" href="https://www.facebook.com/dialog/feed?app_id={{ FACEBOOK.APP_ID }}&amp;link={{ FACEBOOK.URL|urlencode }}&amp;name={{ FACEBOOK.TITLE|urlencode }}&amp;picture={{ FACEBOOK.IMAGE_URL|urlencode }}&amp;redirect_uri={{ FACEBOOK.URL|urlencode }}" alt="Share on Facebook" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Facebook In Navbar', '{{ PROJECT_NAME }}']);"></a></li>
                             </ul>
                         </div>
 
@@ -189,15 +183,16 @@
 
     <!-- GOOGLE ANALYTICS -->
 	<script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', '{{ GOOGLE_ANALYTICS_ID }}']);
-        _gaq.push(['_trackPageview']);
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', '{{ GOOGLE_ANALYTICS_ID }}']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+	</script>
 
 
    
