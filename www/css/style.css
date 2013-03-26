@@ -23,42 +23,62 @@ section {
   margin-top: 40px;
 }
 h1 {
-  font-size: 41px;
+  font-family: 'Roboto';
+  font-size: 44px;
+  text-align: left;
   font-weight: normal;
+  color: #393939;
   line-height: 100%;
+  margin-top: 50px;
   display: block;
 }
 h2 {
+  font-family: 'Roboto';
   font-size: 20px;
+  text-align: left;
+  font-weight: bold;
+  color: #464646;
   line-height: 100%;
   margin-top: 30px;
   display: block;
 }
 h3 {
-  font-size: 17px;
+  font-family: 'Roboto';
+  font-size: 18px;
   font-weight: normal;
+  text-align: left;
+  color: #464646;
   line-height: 100%;
-  margin-top: 30px;
+  margin-top: 50px;
   display: block;
 }
 h4 {
+  font-family: 'Roboto';
+  font-weight: bold;
+  text-align: left;
+  color: #464646;
   font-size: 14px;
   line-height: 100%;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 40px;
   display: block;
 }
 p {
-  font-size: 17px;
+  font-family: 'Arial';
+  font-size: 13px;
+  color: #464646;
   margin: 10px 0;
 }
 time {
   font-size: 14px;
   color: #777777;
+  text-align: left;
   margin: 3px 0;
   display: block;
 }
 a {
+  font-family: 'Arial';
+  font-size: 13px;
   color: #EB6600;
   text-decoration: none;
 }

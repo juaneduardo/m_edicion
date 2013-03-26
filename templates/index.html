@@ -9,12 +9,12 @@
 
                         <a class="big-button" href="colaborar.html">Colaborar Ahora</a>
 
-                        <a class="display-block" href="#">Notificarme cuando sea publicado ›</a>
+                        <a class="display-block" href="https://docs.google.com/a/poderopedia.com/spreadsheet/viewform?fromEmail=true&formkey=dDVpQllxeTNrRzNkeTBOUHVSNEhpSmc6MQ" target="_blank">Notificarme cuando sea publicado ›</a>
                     </div>
 
                     <div class="span8 clearfix">
                         <div class="text pull-left">
-                            <p>El Manual de Periodismo de Datos es un proyecto gratuito y abierto, escrito de forma colaborativa y voluntaria por periodistas, desarrolladores y diseñadores. Su objetivo es dar cuenta del estado del Periodismo de Datos en Iberoamérica y cómo desarrollar Periodismo de Datos en nuestros países.</p>
+                            <p>Estamos escribiendo el Manual de Periodismo de Datos, un proyecto gratuito y abierto, realizado de forma colaborativa y voluntaria por periodistas, desarrolladores y diseñadores. Su objetivo es dar cuenta del estado del Periodismo de Datos en Iberoamérica y cómo desarrollar Periodismo de Datos en nuestros países.</p>
 
                             <span>Incluye temas como:</span>
                             <ul class="list">
@@ -105,15 +105,15 @@
                         <div class="box-heading">
                             <h2>Últimas Noticias</h2>
                         </div>
+						{% for news in feed[ "items" ][:4] %}
+                        <a class="title" href="{{ news[ "link" ] }}">{{ news[ "title" ] }}</a>
+                        <time>{{ news[ "date" ] }}</time>
 
-                        <a class="title" href="{{ feed["items"][0][ "link" ] }}">{{ feed["items"][0][ "title" ] }}</a>
-                        <time>{{ feed["items"][0][ "date" ] }}</time>
+                       
 
-                        <img src="tmp/01.jpg" alt=""/>
-
-                        <p>{{ feed["items"][0][ "summary" ][:320]|safe }}... <a href="{{ feed["items"][0][ "link" ] }}">más ›</a></p>
-
-                        <a class="button" href="http://periodismodedatos.tumblr.com/">Ver Más Noticias</a>
+                        <p>{{ news[ "summary" ]|safe }}... <a href="{{ news[ "link" ] }}">más ›</a></p>
+						{% endfor %}
+                        <a class="button" href="http://blog.periodismodedatos.org">Ver Más Noticias</a>
                     </section>
 {% endblock %}
 

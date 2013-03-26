@@ -19,7 +19,7 @@
     {% block extra_css %}{% endblock extra_css %}
     {{ CSS.push('css/style.css') }}
     {{ CSS.render('css/app.min.css') }}
-
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300italic,700,500' rel='stylesheet' type='text/css'>
    
 
     <!-- JS -->
@@ -56,19 +56,39 @@
                     <div class="clearfix">
                         <nav class="span8 pull-left">
                             <ul class="clearfix">
-                                <li class="active"><a href="/">MPDI</a></li>
+                                {% if menu=='MPDI' %}
+                                <li class="active"><a href="/"><img src="img/libro-header-active.png"> MPDI</a></li>
+                                {% else %}
+                                <li class=""><a href="/"><img src="img/libro-header.png"> MPDI</a></li>
+                                {% endif %}
+                                {% if menu=='manual' %}
+                                <li class="active"><a href="manual.html">Sobre el Manual</a></li>
+                                {% else %}
                                 <li class=""><a href="manual.html">Sobre el Manual</a></li>
+                                {% endif %}
+                                {% if menu=='colaborar' %}
+                                <li class="active"><a href="colaborar.html">Colaborar</a></li>
+                                {% else %}
                                 <li class=""><a href="colaborar.html">Colaborar</a></li>
+                                {% endif %}
+                                {% if menu=='indice' %}
+                                <li class="active"><a href="indice.html">Índice</a></li>
+                                {% else %}
                                 <li class=""><a href="indice.html">Índice</a></li>
+                                {% endif %}
+                                {% if menu=='participantes' %}
+                                <li class="active"><a href="participantes.html">Participantes</a></li>
+                                {% else %}
                                 <li class=""><a href="participantes.html">Participantes</a></li>
-                                <li class=""><a href="http://periodismodedatos.tumblr.com">Noticias</a></li>
+                                {% endif %}
+                                <li class=""><a href="http://blog.periodismodedatos.org/">Noticias</a></li>
                             </ul>
                         </nav>
 
                         <div class="span4 social pull-right">
                             <ul class="clearfix">
                                 <li>Compartir: </li> 
-                                <li class="google"><a href="https://m.google.com/app/plus/x/?v=compose&content= {{ TWITTER.TEXT|urlencode }}" onclick="window.open('https://m.google.com/app/plus/x/?v=compose&content={{ TWITTER.TEXT|urlencode }} {{ TWITTER.URL|urlencode }}','gplusshare','width=450,height=300,left='+(screen.availWidth/2-225)+',top='+(screen.availHeight/2-150)+'');return false;"></a>
+                                <li class="google"><a href="https://plus.google.com/share?url={{ TWITTER.URL|urlencode }}&content={{  TWITTER.TEXT|urlencode }}"></a>
 								</li>
                                 <li class="twitter"><a rel="external" href="http://twitter.com/share?text={{ TWITTER.TEXT|urlencode }} &amp;url={{ TWITTER.URL|urlencode }}" alt="Share on Twitter" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Twitter In Navbar', '{{ PROJECT_NAME }}']);"></a></li>
 								<li class="facebook"><a rel="external" href="https://www.facebook.com/dialog/feed?app_id={{ FACEBOOK.APP_ID }}&amp;link={{ FACEBOOK.URL|urlencode }}&amp;name={{ FACEBOOK.TITLE|urlencode }}&amp;picture={{ FACEBOOK.IMAGE_URL|urlencode }}&amp;redirect_uri={{ FACEBOOK.URL|urlencode }}" alt="Share on Facebook" target="_blank" onclick="_gaq.push(['_trackEvent', 'Social', 'Click Facebook In Navbar', '{{ PROJECT_NAME }}']);"></a></li>
@@ -103,9 +123,9 @@
                             <div class="clearfix">
                               <div>
                                   Súmate a la <a href="https://groups.google.com/forum/#!forum/manualperiodismodedatos">lista de correo</a><br>
-                                      Revisa las <a href="periodismodedatos.tumblr.com">noticias del Blog</a><br>
+                                      Revisa las <a href="http://blog.periodismodedatos.org">noticias del Blog</a><br>
                                       Síguenos en <a href="http://twitter.com/poderomedia">@poderomedia</a> para información actualizada<br>
-                                    Usa el hashtag oficial #periodismodedatos para sumarte a la                                      conversación y marcar contenidos relevantes para la comunidad                                      Si subes material a Slideshare, Flickr, Youtube, Vimeo, etc. por favor                                    etiquétalo con el tag #periodismodedatos para identificarlo difundirlo
+                                    Usa el hashtag oficial <a href="https://twitter.com/search?q=%23periodismodedatos&src=typd">#periodismodedatos</a> para sumarte a la                                      conversación y marcar contenidos relevantes para la comunidad                                      Si subes material a Slideshare, Flickr, Youtube, Vimeo, etc. por favor                                    etiquétalo con el tag #periodismodedatos para identificarlo difundirlo
                                 </div>
                             </div>
                         </section>
@@ -158,7 +178,7 @@
                         <span class="uppercase">Más</span>
 
                         <p>El Manual de Periodismo de Datos Iberocamericano es un proyecto de la <a href="http://poderomedia.org">Fundación Poderomedia</a> con el apoyo del programa <a href="http://www.icfj.org/our-work/knight/">Knight International Journalism Fellow</a> del <a href="http://www.icfj.org">International Center for Journalism</a> <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.es">liberado bajo licencia Creative Commons 3.0 Atribución-Compartir Igual.</a></p>
-						<p>Sitio hecho con la <a href="https://github.com/nprapps/app-template">NPR App Template</a> y alojado en <a href="www.github.com">Github</a></p>
+						<p>Sitio hecho con la <a href="https://github.com/nprapps/app-template">NPR App Template</a> y alojado en <a href="http://www.github.com">Github</a></p>
                     </div>
                 </div>
             </div>
@@ -185,6 +205,7 @@
 	<script type="text/javascript">
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', '{{ GOOGLE_ANALYTICS_ID }}']);
+		  _gaq.push(['_setDomainName', '{{ DOMAIN_NAME }}']);
 		  _gaq.push(['_trackPageview']);
 		  (function() {
 			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;

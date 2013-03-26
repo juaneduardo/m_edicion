@@ -16,10 +16,10 @@ app = Flask(app_config.PROJECT_NAME)
 @app.route('/')
 def index():
     import feedparser
-    noticias_tumblr = "http://periodismodedatos.tumblr.com/rss"
+    noticias_tumblr = "http://blog.periodismodedatos.org/rss"
     feed = feedparser.parse( noticias_tumblr )
 
-    return render_template('index.html', feed=feed, **make_context())
+    return render_template('index.html', menu='MPDI', feed=feed, **make_context())
 
 
 @app.route('/manual.html')
@@ -27,28 +27,28 @@ def manual():
     """
     Example view demonstrating rendering a simple HTML page.
     """
-    return render_template('manual.html', **make_context())
+    return render_template('manual.html', menu='manual',**make_context())
 
 @app.route('/colaborar.html')
 def colaborar():
     """
     Example view demonstrating rendering a simple HTML page.
     """
-    return render_template('colaborar.html', **make_context())
+    return render_template('colaborar.html', menu='colaborar',**make_context())
 
 @app.route('/indice.html')
 def indice():
     """
     Example view demonstrating rendering a simple HTML page.
     """
-    return render_template('indice.html', **make_context())
+    return render_template('indice.html', menu='indice',**make_context())
 
 @app.route('/participantes.html')
 def participantes():
     """
     Example view demonstrating rendering a simple HTML page.
     """
-    return render_template('participantes.html', **make_context())
+    return render_template('participantes.html', menu='participantes', **make_context())
 
 # Render LESS files on-demand
 @app.route('/less/<string:filename>')

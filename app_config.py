@@ -11,8 +11,9 @@ They will be exposed to users. Use environment variables instead.
 import os
 
 PROJECT_NAME = 'Manual de Periodismo de Datos Iberoamericano'
-DEPLOYED_NAME = '' 
+DEPLOYED_NAME = 'Manual de Periodismo de Datos Iberoamericano' 
 REPOSITORY_NAME = 'm_edicion'
+DOMAIN_NAME = 'periodismodedatos.org'
 
 PRODUCTION_S3_BUCKETS = ['manual.periodismodedatos.org']
 PRODUCTION_SERVERS = ['manual.periodismodedatos.org']
@@ -25,7 +26,7 @@ SERVERS = []
 DEBUG = True
 
 PROJECT_DESCRIPTION = 'Manual de Periodismo de Datos Iberoamericano.'
-SHARE_URL = 'http://%s/%s' % (PRODUCTION_S3_BUCKETS[0], DEPLOYED_NAME)
+SHARE_URL = 'http://%s' % (PRODUCTION_S3_BUCKETS[0])
 
 
 TWITTER = {
