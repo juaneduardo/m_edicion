@@ -16,7 +16,7 @@
                         <div class="text pull-left">
                             <p>Estamos escribiendo el Manual de Periodismo de Datos, un proyecto gratuito y abierto, realizado de forma colaborativa y voluntaria por periodistas, desarrolladores y diseñadores. Su objetivo es dar cuenta del estado del Periodismo de Datos en Iberoamérica y cómo desarrollar Periodismo de Datos en nuestros países.</p>
 
-                            <span>Incluye temas como:</span>
+                            <p>Incluye temas como:</p>
                             <ul class="list">
                                 <li>Casos Destacados</li>
                                 <li>Herramientas y código</li>
@@ -85,7 +85,7 @@
 
                         <strong>Algunas de las personas y organizaciones que están participando en la elaboración del Manual:</strong>
 
-                        <ul>
+                        <ul class="chapters">
                             <li>Sandra Crucianelli (Argentina)</li>
                             <li><a href="#">Mariano Blejman</a> (Argentina)</li>
                             <li>Hacks/Hackers Buenos Aires</li>
@@ -105,13 +105,13 @@
                         <div class="box-heading">
                             <h2>Últimas Noticias</h2>
                         </div>
-						{% for news in feed[ "items" ][:4] %}
+						{% for news in feed[ "items" ][:6] %}
                         <a class="title" href="{{ news[ "link" ] }}">{{ news[ "title" ] }}</a>
                         <time>{{ news[ "date" ] }}</time>
-
+						
                        
 
-                        <p>{{ news[ "summary" ]|safe }}... <a href="{{ news[ "link" ] }}">más ›</a></p>
+                        
 						{% endfor %}
                         <a class="button" href="http://blog.periodismodedatos.org">Ver Más Noticias</a>
                     </section>

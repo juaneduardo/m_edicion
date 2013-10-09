@@ -13,7 +13,8 @@
 /* Common Stuff*/
 body {
   background-color: #F2F2F2;
-  font-family: 'Myriad Pro', sans-serif;
+  font-family: 'Arial';
+  font-size: 13px;
   color: #393939;
   background-image: url('../img/bg-circle.png');
   background-repeat: no-repeat;
@@ -21,6 +22,9 @@ body {
 }
 section {
   margin-top: 40px;
+}
+.span4 strong {
+  font-family: 'Arial';
 }
 h1 {
   font-family: 'Roboto';
@@ -51,6 +55,10 @@ h3 {
   line-height: 100%;
   margin-top: 50px;
   display: block;
+}
+h3 a {
+  font-family: 'Roboto';
+  font-size: 18px;
 }
 h4 {
   font-family: 'Roboto';
@@ -88,20 +96,22 @@ a:hover {
 }
 ul,
 ol {
+  font-family: 'Arial';
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 13px;
 }
 ul li,
-ol li {
+ol li { 
   margin-bottom: 10px;
 }
 .list {
+  font-family: 'Arial';
   list-style-image: url('../img/li1.png');
   margin-left: 15px;
   margin-bottom: 10px;
-  font-size: 17px;
+  font-size: 13px;
 }
 .chapters {
   list-style-image: url('../img/li2.png');
@@ -132,12 +142,16 @@ ol li {
   margin: 0;
 }
 .title {
+  font-family: 'Roboto';
   color: #393939;
   font-size: 18px;
   display: block;
   margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 0;
 }
 .title:hover {
+  font-family: 'Roboto';
   color: #EB6600;
 }
 .subtitle {
@@ -247,6 +261,7 @@ header .social .twitter a {
   width: 80%;
   margin: 0 auto;
   margin-bottom: 20px;
+  text-align: center;
   word-wrap: break-word;
 }
 .top .manual a.display-block {
@@ -299,18 +314,27 @@ footer {
   color: #EEEEEE;
   padding: 45px 0;
 }
+footer p {
+    font-family: 'Roboto';
+    font-size: 14px;
+    text-align: left;
+    color: #ffffff;
+    text-decoration: none;
+}
 footer .uppercase {
   margin-bottom: 15px;
   display: block;
 }
 footer a {
   color: #ECE547;
+  font-size: 14px;
   text-decoration: none;
 }
 footer a:hover {
-  color: #eae230;
-  text-decoration: none;
-}
+ color: #eae230;
+ font-size: 14px;
+ text-decoration: none;
+ }
 /* Single */
 .heading {
   border-bottom: 6px solid white;
@@ -323,6 +347,9 @@ footer a:hover {
   line-height: 140%;
   color: #393939;
 }
+.heading a {
+  font-size: 18px;
+}
 .sidebar .pull-left {
   display: inline-block;
   width: 40%;
@@ -332,6 +359,14 @@ footer a:hover {
   width: 53%;
   padding: 0 10px;
 }
+p .abstract {
+ font-family: 'Roboto', light;
+ font-size: 18px;
+ text-align: left;
+ font-weight: normal;
+ color: #393939;
+ line-height: 100%;
+ }
 @media (max-width: 767px) {
   header,
   footer {
